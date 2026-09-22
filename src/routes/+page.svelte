@@ -7,8 +7,7 @@
 	let todos: Todos = $state([]);
 
 	const handleClick = () => {
-		count++;
-		alert(`Button clicked ${count} times!`);
+		alert(`Button clicked ${++count} times!`);
 	};
 
 	const fetchTodos = async () => {
