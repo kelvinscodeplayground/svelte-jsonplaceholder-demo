@@ -20,7 +20,13 @@
 		<div class="loading loading-spinner text-2xl text-primary"></div>
 	</div>
 {:then todo}
-	<pre>{JSON.stringify(todo, null, 2)}</pre>
+	<h1 class="text-2xl font-bold">Todo Details</h1>
+	<div class="mt-4">
+		<p><strong>ID:</strong> {todo.id}</p>
+		<p><strong>User ID:</strong> {todo.userId}</p>
+		<p><strong>Title:</strong> {todo.title}</p>
+		<p><strong>Completed:</strong> {todo.completed ? 'Yes' : 'No'}</p>
+	</div>
 {:catch error}
 	{console.log(error)}
 	<div class="m-4 alert alert-outline alert-error">Opps! Something went wrong!</div>

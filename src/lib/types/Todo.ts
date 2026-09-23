@@ -1,8 +1,8 @@
 export type Todo = {
 	id: number;
 	title: string;
-	body: string;
 	userId: number;
+	completed: boolean;
 };
 
-export type Todos = Omit<Todo, 'body'>[];
+export type Todos = Todo[];
