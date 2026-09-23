@@ -1,5 +1,5 @@
 <script lang="ts">
-	import TodoCard from '../components/todo.svelte';
+	import TodoCard from '$lib/components/todo.svelte';
 
 	let count = $state(0);
 
