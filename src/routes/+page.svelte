@@ -1,12 +1,6 @@
 <script lang="ts">
 	import TodoCard from '$lib/components/todo.svelte';
 
-	let count = $state(0);
-
-	const handleClick = () => {
-		alert(`Button clicked ${++count} times!`);
-	};
-
 	const fetchTodos = async () => {
 		await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate a delay
 		const response = await fetch('https://jsonplaceholder.typicode.com/todos');
@@ -16,11 +10,6 @@
 		return await response.json();
 	};
 </script>
-
-<nav class="flex items-center justify-between bg-base-100 p-4">
-	<h1 class="text-2xl font-bold">Todo</h1>
-	<button class="btn btn-primary" onclick={handleClick}>Click Me!</button>
-</nav>
 
 {#await fetchTodos()}
 	<div class="mt-6 grid place-items-center">
